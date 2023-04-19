@@ -1,0 +1,35 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "testType": {
+            "type": "string",
+            "defaultValue": "Standard_LRS",
+            "allowedValues": [
+                "Standard_LRS",
+                "Standard_ZRS",
+                "Standard_GRS",
+                "Standard_RAGRS",
+                "Premium_LRS"
+            ]
+        }
+    },
+    "resources": [
+        {
+            "name": "[variables('testName')]",
+            "type": "Microsoft.Storage/storageAccounts",
+            "location": "[resourceGroup().location]",
+            "apiVersion": "2022-09-01",
+            "dependsOn": [],
+            "tags": {
+                "displayName": "test"
+            },
+            "properties": {
+                "accountType": "[parameters('testType')]"
+            }
+        }
+    ],
+    "variables": {
+        "testName": "[concat('test', uniqueString(resourceGroup().id))]"
+    }
+}

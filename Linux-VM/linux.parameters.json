@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vmName": {
+          "value": "##"
+        }
+        "adminUsername": {
+          "value": "##"
+        }
+        "authenticationType": {
+          "value": "##"
+        }
+        "adminPasswordOrKey": {
+          "value": "##"
+        }
+        "dnsLabelPrefix": {
+          "value": "##"
+        }
+        "ubuntuOSVersion": {
+          "value": "##"
+        }
+        "location": {
+          "value": "##"
+        }
+        "vmSize": {
+          "value": "##"
+        }
+        "virtualNetworkName": {
+          "value": "##"
+        }
+        "subnetName": {
+          "value": "##"
+        }
+        "networkSecurityGroupName": {
+          "value": "##"
+        }
+        "securityType": {
+          "value": "##"
+        }
+    }
+}
